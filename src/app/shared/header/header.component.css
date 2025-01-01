@@ -1,0 +1,8 @@
+/* Toolbar Styling */
+.header-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  background-color: gray;
+  color: white;
+}
