@@ -1,0 +1,13 @@
+
+<mat-list>
+  <mat-list-item *ngFor="let item of items">
+    <img matListAvatar [src]="item.imageUrl" alt="{{ item.name }}">
+    <h3 matLine>{{ item.name }}</h3>
+  </mat-list-item>
+</mat-list>
+
+<div class="find-flight-button">
+  <button mat-raised-button color="primary" routerLink="/search">Find a Flight</button>
+</div>
+
+<app-footer></app-footer>
