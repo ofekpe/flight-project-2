@@ -1,25 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FlightService } from '../../services/flight.service';
-
-interface Flight {
-  flightNumber: string;
-  origin: string;
-  destination: string;
-  boardingDate: string;
-  arrivalDate: string;
-  numberOfSeats: number;
-}
+import { FlightService } from '../../service/flight.service';
+import { CommonModule } from '@angular/common';
+import { Flight } from '../../model/flight.model';
 
 @Component({
   selector: 'app-flight-details',
+  imports: [CommonModule],
   templateUrl: './flight-details.component.html',
-  styleUrls: ['./flight-details.component.css']
+  styleUrls: ['./flight-details.component.css'],
 })
 export class FlightDetailsComponent implements OnInit {
-  flight: Flight | undefined;
+  flight: Flight | undefined = undefined;
 
-  constructor(private route: ActivatedRoute, private flightService: FlightService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private flightService: FlightService
+  ) {}
 
   ngOnInit(): void {
     const flightNumber = this.route.snapshot.paramMap.get('flightNumber');

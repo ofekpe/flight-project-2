@@ -3,16 +3,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import { FlightService } from '../../services/flight.service';
-
-interface Flight {
-  flightNumber: string;
-  origin: string;
-  destination: string;
-  boardingDate: string;
-  arrivalDate: string;
-  numberOfSeats: number;
-}
+import { FlightService } from '../../service/flight.service';
+import { Flight } from '../../model/flight.model';
 
 @Component({
   selector: 'app-manage-flights',
@@ -22,7 +14,15 @@ interface Flight {
   styleUrls: ['./manage-flights.component.css'],
 })
 export class ManageFlightsComponent {
-  displayedColumns: string[] = ['flightNumber', 'origin', 'destination', 'boardingDate', 'arrivalDate', 'numberOfSeats', 'actions'];
+  displayedColumns: string[] = [
+    'flightNumber',
+    'origin',
+    'destination',
+    'boardingDate',
+    'arrivalDate',
+    'numberOfSeats',
+    'actions',
+  ];
   dataSource: Flight[];
 
   constructor(private router: Router, private flightService: FlightService) {

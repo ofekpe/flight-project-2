@@ -5,11 +5,13 @@ import { RouterOutlet } from '@angular/router';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
+import { FindFlightComponent } from '../flights/pages/find-flight/find-flight.component';
+import { LastMinuteFlightsComponent } from '../flights/pages/last-minute-flights/last-minute-flights.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FooterComponent, HeaderComponent, MatSidenavModule, MatListModule, MatButtonModule],
+  imports: [MatListModule, MatButtonModule, FindFlightComponent, LastMinuteFlightsComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

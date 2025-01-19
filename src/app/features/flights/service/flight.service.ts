@@ -1,16 +1,7 @@
 import { Injectable } from '@angular/core';
-
-interface Flight {
-  flightNumber: string;
-  origin: string;
-  destination: string;
-  boardingDate: string;
-  arrivalDate: string;
-  numberOfSeats: number;
-}
-
+import { Flight } from '../model/flight.model';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FlightService {
   private flights: Flight[] = [
@@ -101,6 +92,6 @@ export class FlightService {
   }
 
   getFlightByNumber(flightNumber: string): Flight | undefined {
-    return this.flights.find(flight => flight.flightNumber === flightNumber);
+    return this.flights.find((flight) => flight.flightNumber === flightNumber);
   }
 }
