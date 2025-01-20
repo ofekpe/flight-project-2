@@ -25,8 +25,8 @@ export class FlightService {
       flightNumber: 'TLV003',
       origin: 'Tel Aviv',
       destination: 'San Francisco',
-      boardingDate: new Date('2023-10-05'),
-      arrivalDate: new Date('2023-10-06'),
+      boardingDate: new Date('2025-10-05'),
+      arrivalDate: new Date('2025-10-06'),
       numberOfSeats: 200,
     },
     {
