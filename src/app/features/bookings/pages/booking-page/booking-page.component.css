@@ -1,0 +1,17 @@
+/* Center the text on the page */
+.booking-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh; /* Full viewport height */
+    text-align: center;
+  }
+  
+  .booking-details-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .booking-details-container p {
+    margin: 5px 0;
+  }

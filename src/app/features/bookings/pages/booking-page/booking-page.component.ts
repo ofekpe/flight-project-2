@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FlightService } from '../../service/flight.service';
+import { Flight } from '../../../flights/model/flight.model';
+import { FlightService } from '../../../flights/service/flight.service';
 import { CommonModule } from '@angular/common';
-import { Flight } from '../../model/flight.model';
-
 @Component({
-  selector: 'app-flight-details',
-  imports: [CommonModule,],
-  templateUrl: './flight-details.component.html',
-  styleUrls: ['./flight-details.component.css'],
+  selector: 'app-booking-page',
+  imports: [CommonModule],
+  templateUrl: './booking-page.component.html',
+  styleUrl: './booking-page.component.css',
 })
-export class FlightDetailsComponent implements OnInit {
+export class BookingPageComponent {
   flight: Flight | undefined = undefined;
 
   constructor(

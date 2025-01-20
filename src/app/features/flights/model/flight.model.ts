@@ -3,8 +3,8 @@ export class Flight {
     public flightNumber: string,
     public origin: string,
     public destination: string,
-    public boardingDate: string,
-    public arrivalDate: string,
+    public boardingDate: Date,
+    public arrivalDate: Date,
     public numberOfSeats: number
   ) {}
 }

@@ -9,5 +9,5 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './my-bookings.component.css'
 })
 export class MyBookingsComponent {
-
+  
 }
