@@ -57,8 +57,8 @@ export class FlightService {
       flightNumber: 'FRA007',
       origin: 'Frankfurt',
       destination: 'Los Angeles',
-      boardingDate: new Date('2023-10-13'),
-      arrivalDate: new Date('2023-10-14'),
+      boardingDate: new Date('2025-10-13'),
+      arrivalDate: new Date('2025-10-14'),
       numberOfSeats: 220,
     },
     {
