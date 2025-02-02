@@ -3,6 +3,16 @@
   display: flex;
   align-items: center;
   padding: 0 8px;
-  background-color: gray;
+  background-color: #00FF00;;
+  color: white;
+}
+
+/* Logo Styling */
+.logo {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 10px;
+  text-decoration: none;
   color: white;
 }

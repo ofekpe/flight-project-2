@@ -1,0 +1,52 @@
+<h1 class="title">Book a Flight</h1>
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- Flight Number Column -->
+  <ng-container matColumnDef="flightNumber">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Flight Number </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.flightNumber}} </mat-cell>
+  </ng-container>
+
+  <!-- Origin Column -->
+  <ng-container matColumnDef="origin">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Origin </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.origin}} </mat-cell>
+  </ng-container>
+
+  <!-- Destination Column -->
+  <ng-container matColumnDef="destination">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Destination </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.destination}} </mat-cell>
+  </ng-container>
+
+  <!-- Boarding Date Column -->
+  <ng-container matColumnDef="boardingDate">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Boarding Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.boardingDate}} </mat-cell>
+  </ng-container>
+
+  <!-- Arrival Date Column -->
+  <ng-container matColumnDef="arrivalDate">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Arrival Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.arrivalDate}} </mat-cell>
+  </ng-container>
+
+  <!-- Number of Seats Column -->
+  <ng-container matColumnDef="numberOfSeats">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Number of Seats </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.numberOfSeats}} </mat-cell>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+    <mat-cell *matCellDef="let element">
+      <button mat-icon-button color="primary" (click)="bookFlight(element.flightNumber)">
+        <mat-icon>book</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
